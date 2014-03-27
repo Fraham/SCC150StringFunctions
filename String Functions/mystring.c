@@ -41,12 +41,38 @@ int mystrcmp(const char *s1, const char *s2)
 
 char *mystrncpy(char *dst, const char *src, int n)
 {
-	//here goes your code
+	int count  = 0;
+	
+	while (*s1 != '\0' && count < n)
+	{
+		*dst = *src;
+		
+		dst++;
+		src++;
+		count++;
+	}
+	
+	*dst = '\0';
+	
+	return dst;
 }
 
 char *mystrcpy(char *dst, const char *src)
 {
-	//here goes your code
+	int count  = 0;
+	
+	while (*s1 != '\0')
+	{
+		*dst = *src;
+		
+		dst++;
+		src++;
+		count++;
+	}
+	
+	*dst = '\0';
+	
+	return dst;
 }
 
 
