@@ -10,12 +10,33 @@ int mystrlen(const char* s)
 
 int mystrncmp(const char *s1, const char *s2, int n) 
 {
-    //here goes your code
+    unsigned char uc1, uc2;
+	int count = 0;
+	
+	while (*s1 != '\0' && *s1 == *s2 && count < n)  
+	// will stop when s1 reaches null and when s1 and s2 are not the same and if it hasnt gone above the counter.
+	{
+		s1++; // goes to the next character.
+		s2++;
+		count++;
+	}
+	uc1 = (*(unsigned char *) s1); // gets the character at s1 and s2.
+	uc2 = (*(unsigned char *) s2);
+	return ((uc1 < uc2) ? -1 : (uc1 > uc2)); // if s1 < s2 it will return -1, if s1 > s2 it will return 1 and 0 otherwise.
 }
 
 int mystrcmp(const char *s1, const char *s2) 
 {
-	//here goes your code
+	    unsigned char uc1, uc2;
+	
+	while (*s1 != '\0' && *s1 == *s2)  // will stop when s1 reaches null and when s1 and s2 are not the same.
+	{
+		s1++; // goes to the next character.
+		s2++;
+	}
+	uc1 = (*(unsigned char *) s1); // gets the character at s1 and s2.
+	uc2 = (*(unsigned char *) s2);
+	return ((uc1 < uc2) ? -1 : (uc1 > uc2)); // if s1 < s2 it will return -1, if s1 > s2 it will return 1 and 0 otherwise.
 }
 
 char *mystrncpy(char *dst, const char *src, int n)
