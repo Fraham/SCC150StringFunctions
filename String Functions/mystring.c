@@ -27,7 +27,7 @@ int mystrncmp(const char *s1, const char *s2, int n)
 
 int mystrcmp(const char *s1, const char *s2) 
 {
-	    unsigned char uc1, uc2;
+	unsigned char uc1, uc2;
 	
 	while (*s1 != '\0' && *s1 == *s2)  // will stop when s1 reaches null and when s1 and s2 are not the same.
 	{
@@ -52,5 +52,12 @@ char *mystrcpy(char *dst, const char *src)
 
 char *mystrdup(const char *src) 
 {
-    //here goes your code
+    char *p = malloc(strlen(s) + 1);// need the added one to be have the null character at the end
+	
+	if(p) 
+	{ 
+		strcpy(p, s); 
+	}
+	
+	return p;
 }
