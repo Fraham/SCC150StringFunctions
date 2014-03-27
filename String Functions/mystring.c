@@ -2,10 +2,10 @@
 
 int mystrlen(const char* s) 
 {
-	const char *s;
+	const char *sc;
 
-	for (s = str; *s; ++s);
-	return(s - str);
+	for (sc = s; *sc; s++);
+	return(sc - s);
 }
 
 int mystrncmp(const char *s1, const char *s2, int n) 
