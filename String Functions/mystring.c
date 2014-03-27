@@ -4,8 +4,8 @@ int mystrlen(const char* s)
 {
 	const char *sc;
 
-	for (sc = s; *sc; s++);
-	return(sc - s);
+	for (sc = s; *sc; s++); // will increase s everytime it goes around the loop
+	return(sc - s); // return sc - s has it starts from sc, so it started in an advanced position.
 }
 
 int mystrncmp(const char *s1, const char *s2, int n) 
