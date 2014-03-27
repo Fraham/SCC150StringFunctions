@@ -58,16 +58,13 @@ char *mystrncpy(char *dst, const char *src, int n)
 }
 
 char *mystrcpy(char *dst, const char *src)
-{
-	int count  = 0; // used to keep track of the index
-	
+{	
 	while (*s1 != '\0') // will stop when s1 reaches null
 	{
 		*dst = *src;  // getting the character from the source string.
 		
 		dst++;  // incrementing the to the next character.
 		src++;
-		count++;  // incrementing the index.
 	}
 	
 	*dst = '\0'; // ending the null character on the end.
